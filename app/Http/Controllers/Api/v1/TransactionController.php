@@ -19,7 +19,8 @@ class TransactionController extends Controller
     {
         $transactions = $filter->apply(Transaction::with(['user', 'category'])
             ->where('user_id', auth()->id())
-        )->paginate(10);
+        )->orderByDesc('created_at')
+            ->paginate(10);
 
         return Response::success([
             'results' => TransactionResource::collection($transactions),

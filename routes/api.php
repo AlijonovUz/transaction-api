@@ -4,6 +4,7 @@ use App\Http\Controllers\Api\v1\UserController;
 use App\Http\Controllers\Api\v1\CategoryController;
 use App\Http\Controllers\Api\v1\TransactionController;
 use App\Http\Controllers\Api\v1\StatsController;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Api\v1\AuthController;
@@ -22,7 +23,9 @@ Route::prefix('v1')->group(function () {
     Route::middleware('auth:sanctum')->prefix('user')->group(function () {
         Route::get('me', [UserController::class, 'me']);
         Route::put('me', [UserController::class, 'updateMe']);
+        Route::put('me/password', [UserController::class, 'updatePassword']);
 
+        Route::middleware('can:viewAny,' . User::class)->get('/all', [UserController::class, 'index']);
         Route::middleware('can:view,user')->get('{user}', [UserController::class, 'show']);
         Route::middleware('can:update,user')->put('{user}', [UserController::class, 'update']);
         Route::middleware('can:delete,user')->delete('{user}', [UserController::class, 'destroy']);
