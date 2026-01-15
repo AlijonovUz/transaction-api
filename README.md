@@ -45,7 +45,9 @@ GET /api/v1/user/me
 PUT /api/v1/user/me
 
 GET /api/v1/user/1 (admin)
+
 PUT /api/v1/user/1 (admin)
+
 DELETE /api/v1/user/1 (admin)
 
 ---
