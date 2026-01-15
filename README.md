@@ -44,10 +44,8 @@ POST /api/v1/auth/logout
 GET /api/v1/user/me  
 PUT /api/v1/user/me
 
-GET /api/v1/user/1 (admin)
-
-PUT /api/v1/user/1 (admin)
-
+GET /api/v1/user/1 (admin)   
+PUT /api/v1/user/1 (admin)   
 DELETE /api/v1/user/1 (admin)
 
 ---
@@ -82,6 +80,13 @@ DELETE /api/v1/transactions/{id}
 ## Statistics API
 
 GET /api/v1/stats/summary
+
+Filters:
+?type=income|expense  
+?category_id=1  
+?from=2024-01-01  
+?to=2024-12-31
+
 
 Returns:
 - total_income
