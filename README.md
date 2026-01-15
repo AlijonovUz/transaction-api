@@ -70,6 +70,9 @@ Filters:
 ?from=2024-01-01  
 ?to=2024-12-31
 
+Pagination:
+?page=1
+
 POST /api/v1/transactions  
 GET /api/v1/transactions/{id}  
 PUT /api/v1/transactions/{id}  
