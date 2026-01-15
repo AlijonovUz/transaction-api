@@ -101,39 +101,46 @@ Admin can pass user_id to view stats for a specific user.
 
 ---
 
-## Success response
+## Success Response Format
 
 ```json
 {
-  "success": true,
-  "data": {
-      "token": "SANCTUM_TOKEN", 
-      "user": {
-          "id": 1,
-          "name": "John Doe",
-          "email": "john@example.com",
-          "role": "user"
-      }
-  },
-  "error": null
+    "success": true,
+    "data": {},
+    "error": null
 }
 ```
 
----
-
-## Error response
+Example (login):
 
 ```json
 {
-  "success": false,
-  "data": null,
-  "error": {
+    "success": true,
+    "data": {
+        "token": "SANCTUM_TOKEN",
+        "user": {
+            "id": 1,
+            "name": "John Doe",
+            "email": "john@example.com",
+            "role": "user"
+        }
+    },
+    "error": null
+}
+```
+
+## Error Response Format
+
+```json
+{
+    "success": false,
+    "data": null,
+    "error": {
     "errorId": 403,
-    "isFriendly": true,
-    "errorMsg": "Unauthorized", 
-    "details": []
-  }
+        "isFriendly": true,
+        "errorMsg": "Unauthorized",
+        "details": []
+    }
 }
 ```
-
 ---
