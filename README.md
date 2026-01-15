@@ -82,7 +82,8 @@ DELETE /api/v1/transactions/{id}
 
 ## Statistics API
 
-GET /api/v1/stats/summary
+GET /api/v1/stats/summary    
+GET /api/v1/stats/summary/?user_id=1 (admin)
 
 Filters:
 ?type=income|expense  
