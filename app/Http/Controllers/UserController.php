@@ -1,15 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Api\v1;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Http\Requests\Me\UpdatePasswordRequest;
 use App\Http\Requests\Me\UpdateRequest;
-use App\Http\Resources\Api\v1\UserResource;
+use App\Http\Resources\UserResource;
 use App\Models\User;
 use App\Support\Response;
-
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller

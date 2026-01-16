@@ -1,13 +1,12 @@
 <?php
 
-use App\Http\Controllers\Api\v1\UserController;
-use App\Http\Controllers\Api\v1\CategoryController;
-use App\Http\Controllers\Api\v1\TransactionController;
-use App\Http\Controllers\Api\v1\StatsController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\StatsController;
+use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\UserController;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
-
-use App\Http\Controllers\Api\v1\AuthController;
 
 Route::prefix('v1')->group(function () {
 

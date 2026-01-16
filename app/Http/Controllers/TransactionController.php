@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Api\v1;
+namespace App\Http\Controllers;
 
 use App\Filters\TransactionFilter;
-use App\Http\Controllers\Controller;
 use App\Http\Requests\Transaction\StoreRequest;
 use App\Http\Requests\Transaction\UpdateRequest;
-use App\Http\Resources\Api\v1\TransactionResource;
+use App\Http\Resources\TransactionResource;
 use App\Models\Transaction;
 use App\Support\Response;
 

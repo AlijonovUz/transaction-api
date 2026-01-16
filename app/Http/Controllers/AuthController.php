@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Api\v1;
+namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
 use App\Http\Requests\Auth\RegisterRequest;
-use App\Http\Resources\Api\v1\UserResource;
+use App\Http\Resources\UserResource;
 use App\Models\User;
 use App\Support\Response;
 use Illuminate\Http\Request;

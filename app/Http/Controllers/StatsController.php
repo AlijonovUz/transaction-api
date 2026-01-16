@@ -1,9 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Api\v1;
+namespace App\Http\Controllers;
 
 use App\Filters\TransactionFilter;
-use App\Http\Controllers\Controller;
 use App\Models\Transaction;
 use App\Support\Response;
 
